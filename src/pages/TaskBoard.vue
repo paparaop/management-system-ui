@@ -387,7 +387,6 @@
 </template>
 
 <script>
-import Vue from 'vue';
 import draggable from 'vuedraggable';
 import {ref} from 'vue'
 

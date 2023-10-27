@@ -47,8 +47,7 @@
 </template>
 
 <script>
-import {defineComponent, defineAsyncComponent} from 'vue';
-import * as echarts from 'echarts';
+import {defineComponent} from 'vue';
 import ECharts from 'vue-echarts';
 
 export default defineComponent({
