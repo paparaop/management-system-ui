@@ -10,6 +10,7 @@
 
 
 const { configure } = require('quasar/wrappers');
+const path = require('path');
 
 
 module.exports = configure(function (/* ctx */) {
@@ -30,8 +31,8 @@ module.exports = configure(function (/* ctx */) {
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
     boot: [
-      
-      
+      'i18n',
+      'axios'      
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
@@ -43,7 +44,7 @@ module.exports = configure(function (/* ctx */) {
     extras: [
       // 'ionicons-v4',
       // 'mdi-v5',
-      // 'fontawesome-v6',
+       'fontawesome-v6',
       // 'eva-icons',
       // 'themify',
       // 'line-awesome',
@@ -60,7 +61,7 @@ module.exports = configure(function (/* ctx */) {
         node: 'node16'
       },
 
-      vueRouterMode: 'hash', // available values: 'hash', 'history'
+      vueRouterMode: 'history', // available values: 'hash', 'history'
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
@@ -80,9 +81,15 @@ module.exports = configure(function (/* ctx */) {
       // viteVuePluginOptions: {},
 
       
-      // vitePlugins: [
-      //   [ 'package-name', { ..options.. } ]
-      // ]
+      vitePlugins: [
+        ['@intlify/vite-plugin-vue-i18n', {
+          // if you want to use Vue I18n Legacy API, you need to set `compositionOnly: false`
+          // compositionOnly: false,
+
+          // you need to set i18n resource including paths !
+          include: path.resolve(__dirname, './src/i18n/**')
+        }]
+      ]
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
@@ -106,7 +113,9 @@ module.exports = configure(function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: [
+        'AppFullscreen'
+      ]
     },
 
     // animations: 'all', // --- includes all animations
