@@ -9,7 +9,7 @@ import {defineComponent} from 'vue'
 import {ref} from 'vue'
 
 export default defineComponent({
-  name: 'Map',
+  name: 'MapComponent',
   setup() {
     return {
       mapData: ref(''),

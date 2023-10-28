@@ -1,7 +1,7 @@
 <template>
   <q-page class="q-pa-sm">
     <div class="row q-col-gutter-sm">
-      <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12" v-for="(data,index) in card_data">
+      <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12" v-for="data in card_data">
         <directory-card class="col-lg-4 fit col-md-4 col-sm-12 col-xs-12" :avatar="data.avatar" :name="data.name"
                         :des="data.des"
                         :email="data.email"></directory-card>

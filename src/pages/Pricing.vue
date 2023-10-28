@@ -35,7 +35,7 @@
       </section>
       <section class="q-pb-lg">
         <div class="row q-col-gutter-sm q-px-sm">
-          <div class="col-lg-3 col-md-3 col-xs-12 col-sm-12" v-for="pricing_item, pricing_index in pricing_data">
+          <div class="col-lg-3 col-md-3 col-xs-12 col-sm-12" v-for="pricing_item in pricing_data">
             <card-pricing :title="pricing_item.title" :icon="pricing_item.icon" :price="pricing_item.price"
                           :background_image="pricing_item.background_image" :text="pricing_item.text"></card-pricing>
           </div>

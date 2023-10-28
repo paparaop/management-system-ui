@@ -118,7 +118,7 @@ export default defineComponent({
       if (this.type == 'All') {
         return cards_data
       } else {
-        let self = this
+        //let self = this
         return this.cards_data.filter(function (item) {
           return item.type.toLowerCase() == self.type.toLowerCase()
         })

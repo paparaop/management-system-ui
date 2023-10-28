@@ -83,6 +83,9 @@ module.exports = {
     // The core 'no-unused-vars' rules (in the eslint:recommended ruleset)
     // does not work with type definitions
     'no-unused-vars': 'off',
+    'vue/multi-word-component-names': 'off',
+     'vue/require-v-for-key': 'off',
+     'vue/no-reserved-component-names': 'off',
 
     // allow debugger during development only
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'

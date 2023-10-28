@@ -22,8 +22,8 @@
         {{ data.caption }}
       </div>
       <div>
-        <q-rating
-          v-model="data.rating"
+        <!-- <q-rating
+          v-model="data"
           max="5"
           size="1.5em"
           color="yellow"
@@ -31,7 +31,7 @@
           icon-selected="star"
           icon-half="star_half" readonly
           no-dimming
-        />
+        /> -->
       </div>
     </q-card-section>
     <q-card-section>
